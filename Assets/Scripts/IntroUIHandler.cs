@@ -13,9 +13,12 @@ public class IntroUIHandler : MonoBehaviour
     void Start()
     {
         GameData.PLAYER_DATA = new PlayerData();
-        GameData.PLAYER_DATA.score = 1000;
+        GameData.PLAYER_DATA.score = 0;
         GameData.PLAYER_DATA.nickName = "";
         GameData.PLAYER_DATA.lastPosition = new Vector3(0.0f, 0.0f, 0.0f);
+
+        GameData.PLAYER_DATA.goodCollectiblePositions = new List<Vector3>();
+        GameData.PLAYER_DATA.badCollectiblePositions = new List<Vector3>();
     }
 
     // Update is called once per frame
@@ -27,6 +30,6 @@ public class IntroUIHandler : MonoBehaviour
     public void OnEnterButtonClick()
     {
         GameData.PLAYER_DATA.nickName = nickNameField.text;
-        SceneManager.LoadScene("TestScene");
+        SceneManager.LoadScene("RealTimeScene");
     }
 }

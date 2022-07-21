@@ -35,4 +35,18 @@ public class PlayerController : MonoBehaviour
 
         GameData.PLAYER_DATA.lastPosition = transform.position;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("BadCollectible"))
+        {
+            GameData.PLAYER_DATA.score -= 10;
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.CompareTag("GoodCollectible"))
+        {
+            GameData.PLAYER_DATA.score += 10;
+            Destroy(other.gameObject);
+        }
+    }
 }

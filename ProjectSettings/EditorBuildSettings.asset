@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/IntroScene.unity
     guid: 3ab003f3779fad543a64412d01d28e4a
   - enabled: 1
-    path: Assets/Scenes/TestScene.unity
+    path: Assets/Scenes/RealTimeScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
