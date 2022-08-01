@@ -28,31 +28,49 @@ public class SpawningToolEditor : Editor
 
         GUILayout.BeginHorizontal();
 
-            label.text = "Spawn Collectibles";
-            label.tooltip = "Spawns collectibles on the generated terrain, given two prefabs and some config";
-            if (GUILayout.Button(label))
-            {
-                spawner.SpawnCollectibles();
-            }
+        GUILayout.BeginVertical();
 
-            GUILayout.BeginVertical();
+        label.text = "Spawn Terrain";
+        label.tooltip = "Spawns a terrain, given a prefab";
+        if (GUILayout.Button(label))
+        {
+            spawner.SpawnTerrain();
+        }
+
+        label.text = "Spawn Collectibles";
+        label.tooltip = "Spawns collectibles on the generated terrain, given two prefabs and some config";
+        if (GUILayout.Button(label))
+        {
+            spawner.SpawnCollectibles();
+        }
+
+        GUILayout.EndVertical();
+
+        GUILayout.BeginVertical();
         
-                label.text = "Save Configuration";
-                label.tooltip = "Saves the current configuration in a .json file";
-                if (GUILayout.Button(label))
-                {
-                    //TODO Save
-                }
+        label.text = "Save Configuration";
+        label.tooltip = "Saves the current configuration in a .json file";
+        if (GUILayout.Button(label))
+        {
+            spawner.SaveConfiguration();
+        }
 
-                label.text = "Load Configuration";
-                label.tooltip = "Loads a new configuration from a .json file";
-                if (GUILayout.Button(label))
-                {
-                    //TODO Load
-                }
+        label.text = "Load Configuration";
+        label.tooltip = "Loads a new configuration from a .json file";
+        if (GUILayout.Button(label))
+        {
+            spawner.LoadConfiguration();
+        }
 
-            GUILayout.EndVertical();
+        GUILayout.EndVertical();
 
         GUILayout.EndHorizontal();
+
+        label.text = "Save Level Prefab";
+        label.tooltip = "Saves a prefab of the entire level";
+        if (GUILayout.Button(label))
+        {
+            spawner.SaveLevelPrefab();
+        }
     }
 }

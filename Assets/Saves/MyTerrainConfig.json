@@ -1,0 +1,10 @@
+{
+    "ChanceToSpawnBad": 0.3179999887943268,
+    "TotalCollectibles": 23,
+    "TerrainWidth": 40.0,
+    "TerrainLength": 40.0,
+    "minZ": -20.0,
+    "minX": -20.0,
+    "maxZ": 20.0,
+    "maxX": 20.0
+}
